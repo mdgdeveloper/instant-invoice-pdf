@@ -1,8 +1,7 @@
 // components/pdf.tsx
 'use client';
-import dynamic from "next/dynamic";
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
-
+import { PDFDownloadLink } from "@react-pdf/renderer";
 
 // const [formData, setFormData] = useState({
 //   // Company Info
@@ -62,14 +61,6 @@ interface Props {
 
 
 
-
-const PDFDownloadLink = dynamic(
-  () => import("@react-pdf/renderer").then((mod) => mod.PDFDownloadLink),
-  {
-    ssr: false,
-    loading: () => <p>Loading...</p>,
-  },
-);
 
 const CalculateTotalWithTax = (items: Array<{ price: number; quantity: number; tax: number }>) => {
   return items.reduce((total, item) => {
