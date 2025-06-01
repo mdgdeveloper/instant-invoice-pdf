@@ -16,7 +16,10 @@ type Props = {
 };
 
 export default function InvoiceForm({ data, onChange }: Props) {
-  const updateField = (field: keyof Props['data'], value: any) => {
+  const updateField = (
+    field: keyof Props['data'],
+    value: string | Item[] | File | null
+  ) => {
     onChange({ ...data, [field]: value });
   };
 
