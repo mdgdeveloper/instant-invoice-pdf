@@ -2,6 +2,7 @@ import Header from "@/components/structure/Header";
 import Hero from "@/components/structure/Hero";
 import CallToAction from "@/components/structure/CallToAction";
 import InvoiceForm from "@/components/structure/InvoiceForm";
+import AdBanner from "@/components/ads/AdBanner";
 
 
 export default function InvoiceGeneratorPage() {
@@ -11,6 +12,7 @@ export default function InvoiceGeneratorPage() {
       <main>
         <Hero />
         <CallToAction />
+        <AdBanner />
         <InvoiceForm />
       </main>
     </div>
