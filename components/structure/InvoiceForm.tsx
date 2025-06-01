@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Plus, Trash2, FileText, Building, User, Calendar, DollarSign } from 'lucide-react';
+import { Plus, Trash2, FileText, Building, User, DollarSign } from 'lucide-react';
 import { PDFLink } from '../pdf';
 
 export default function InvoiceForm() {
@@ -128,9 +128,9 @@ export default function InvoiceForm() {
       formData.invoiceDate
     ];
 
-    const hasValidItems = formData.items.every(item => 
-      item.description.trim() !== '' && 
-      item.quantity > 0 && 
+    const hasValidItems = formData.items.every(item =>
+      item.description.trim() !== '' &&
+      item.quantity > 0 &&
       item.price >= 0
     );
 

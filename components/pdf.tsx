@@ -79,32 +79,7 @@ const CalculateTotalWithTax = (items: Array<{ price: number; quantity: number; t
   }, 0);
 }
 
-// Dummy invoice data
-const invoice = {
-  number: "INV-1001",
-  date: "2025-05-27",
-  from: {
-    name: "ACME Corp",
-    address: "123 Business St, Suite 456, Cityville, CA",
-  },
-  to: {
-    name: "John Doe",
-    address: "789 Customer Rd, Apt 101, Townsville, TX",
-  },
-  items: [
-    { description: "Web Design", quantity: 1, price: 500 },
-    { description: "Hosting (12 months)", quantity: 1, price: 120 },
-    { description: "Domain Registration", quantity: 1, price: 15 },
-  ],
-};
 
-// Calculate total
-const calculateTotal = (items: typeof invoice.items) =>
-  items.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
-// Dummy logo URL
-
-const logoBase64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVR42mP8//8/AwAI/wH+9Q4AAAAASUVORK5CYII="; // Replace with your actual base64 logo
 
 // Styles
 const styles = StyleSheet.create({
